@@ -1,4 +1,4 @@
-
+echo .bashrc
 HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.zhistory
@@ -48,7 +48,7 @@ setopt auto_menu
 #zstyle ':completion:*' completer _complete _correct _approximate menu select
 zmodload zsh/complist
 
-alias vim=nvim
+alias vim="NVIM_LISTEN_ADDRESS=/tmp/nvimsocket nvim"
 
 # bindkey
 bindkey -v       # vi mode
@@ -67,3 +67,5 @@ fi
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+echo done
