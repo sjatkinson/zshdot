@@ -1,8 +1,3 @@
-echo .bashrc
-HISTSIZE=10000
-SAVEHIST=10000
-HISTFILE=~/.zhistory
-export EDITOR=vim
 PATH=$PATH:$HOME/bin
 
 setopt NO_CASE_GLOB
@@ -19,6 +14,8 @@ setopt share_history
 setopt HIST_IGNORE_ALL_DUPS
 
 typeset -U path # what does this do?
+
+[ -f $BIN_DIR/zplug.zsh ] && echo "do it" && source $BIN_DIR/zplug.zsh
 
 # git prompt
 autoload -Uz vcs_info
@@ -65,7 +62,9 @@ if [[ -a $HOME/etc/zshrc ]] ; then
 	source $HOME/etc/zshrc
 fi
 
+zplug install "zsh-users/zsh-autosuggestions"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+eval "$(zoxide init zsh)"
 
-echo done
+
