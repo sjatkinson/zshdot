@@ -6,6 +6,9 @@ export ZDOTDIR=$XDG_CONFIG_HOME/zsh
 
 HISTSIZE=10000
 SAVEHIST=10000
-HISTFILE=~/.zhistory
+HISTFILE=$XDG_STATE_HOME/zsh/history
 export EDITOR=vim
 export BIN_DIR=${HOME}/.local/bin
+export PAGER="less"
+
+PATH=$PATH:$HOME/bin
