@@ -17,10 +17,8 @@ setopt HIST_IGNORE_ALL_DUPS
 
 typeset -U path # Remove duplicates from PATH
 
-[[ -r ~/oss/zsh-plugins/znap/znap.zsh ]] ||
-    git clone --depth 1 -- \
-        https://github.com/marlonrichert/zsh-snap.git ~/oss/zsh-plugins/znap
-source ~/oss/zsh-plugins/znap/znap.zsh
+source ~/devel/oss/zsh-plugins/antidote/antidote.zsh
+antidote load ${ZDOTDIR:-~}/.zsh_plugins.txt
 
 # Prompt Theme Configuration
 # Default theme - set this to your preferred theme
@@ -167,7 +165,7 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 zmodload zsh/complist
 
-alias vim="NVIM_LISTEN_ADDRESS=/tmp/nvimsocket nvim"
+alias vim="nvim"
 
 # bindkey
 bindkey -v       # vi mode
@@ -193,11 +191,6 @@ if [[ -a $HOME/etc/zshrc ]] ; then
 	source $HOME/etc/zshrc
 fi
 
-# Load plugins with znap
-znap source marlonrichert/zsh-autosuggestions
-znap source zsh-users/zsh-syntax-highlighting
-znap source zsh-users/zsh-history-substring-search
-znap source zsh-users/zsh-completions
 
 # Prompt themes (disabled - using manual switching)
 

@@ -1,6 +1,7 @@
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_DATA_HOME=$HOME/.local/share
 export XDG_STATE_HOME=$HOME/.local/state
+export XDG_BIN=$HOME/.local/bin
 
 export ZDOTDIR=$XDG_CONFIG_HOME/zsh
 
@@ -11,4 +12,4 @@ export EDITOR=vim
 export BIN_DIR=${HOME}/.local/bin
 export PAGER="less"
 
-PATH=$PATH:$HOME/bin
+PATH=$PATH:$BIN_DIR

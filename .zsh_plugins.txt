@@ -1,0 +1,15 @@
+# Zsh plugins loaded by antidote
+# One plugin per line
+
+# Auto-suggestions as you type
+zsh-users/zsh-autosuggestions
+
+# Syntax highlighting
+zsh-users/zsh-syntax-highlighting
+
+# History substring search (arrow keys)
+zsh-users/zsh-history-substring-search
+
+# Additional completions
+zsh-users/zsh-completions
+
